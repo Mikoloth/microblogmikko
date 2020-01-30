@@ -1,0 +1,74 @@
+2020-01-18 12:32:24,690 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 10:31:55,713 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 10:33:50,774 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 10:34:18,418 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 11:02:05,538 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 11:09:44,490 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 13:06:43,240 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 13:11:57,865 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 13:17:58,308 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 13:29:15,263 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 14:12:34,639 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-21 15:02:05,147 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:42]
+2020-01-22 11:51:39,371 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:44]
+2020-01-22 15:20:39,983 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:46]
+2020-01-22 15:20:43,254 ERROR: Exception on /login [GET] [in c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\routes.py", line 67, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\templates\base.html", line 65, in <module>
+    {% block app_content %}{% endblock %}
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\templates\login.html", line 12, in root
+    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\templates\base.html", line 65, in <module>
+    {% block app_content %}{% endblock %}
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\environment.py", line 542, in _generate
+    return generate(source, self, name, filename, defer_init=defer_init,
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\compiler.py", line 82, in generate
+    generator.visit(node)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\compiler.py", line 718, in visit_Template
+    self.fail('block %r defined twice' % block.name, block.lineno)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\jinja2\compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: block 'app_content' defined twice
+2020-01-22 15:25:30,368 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:46]

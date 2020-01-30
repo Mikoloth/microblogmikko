@@ -1,0 +1,84 @@
+2020-01-24 16:09:43,896 ERROR: Exception on /search [GET] [in c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\main\routes.py", line 144, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\client\__init__.py", line 810, in search
+    return self.transport.perform_request(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\transport.py", line 351, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 257, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\connection\base.py", line 181, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-01-24 16:10:04,443 ERROR: Exception on /search [GET] [in c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\main\routes.py", line 144, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\models.py", line 14, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\client\utils.py", line 84, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\client\__init__.py", line 810, in search
+    return self.transport.perform_request(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\transport.py", line 351, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 257, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\mikoloth\ideaprojects\microblogmikko\venv\lib\site-packages\elasticsearch\connection\base.py", line 181, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-01-24 16:15:35,368 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-24 16:19:38,296 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 12:21:05,057 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 12:38:04,459 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 12:38:20,040 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 12:50:59,840 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 13:00:04,688 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 13:00:17,943 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-27 13:13:46,082 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:77]
+2020-01-29 15:29:55,593 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 15:49:28,795 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 16:04:01,694 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 16:07:55,432 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 16:17:36,314 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 16:19:16,450 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-29 16:47:39,154 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-30 10:01:49,522 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:80]
+2020-01-30 10:41:16,777 INFO: Microblog startup [in C:\Users\Mikoloth\IdeaProjects\microblogmikko\app\__init__.py:83]
