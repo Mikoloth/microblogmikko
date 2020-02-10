@@ -3,6 +3,14 @@
 {% block app_content %}
 <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
 
-{{ nickdata }}
-
+<div class="row">
+    <div class="col-md-3 col-sm-6 statistic">
+        {{ nickdata }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-6 statistic">
+        <i class="fas fa-tree iso"></i><div class="trees"><h7>{{ trees }}</h7><br/>trees cut</div>
+    </div>
+</div>
 {% endblock %}

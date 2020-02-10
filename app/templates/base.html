@@ -4,6 +4,11 @@
     {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
 {% endblock %}
 
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='mystyle.css')}}?v={{ range(1, 5491) | random }}">
+{% endblock %}
+
 {% block navbar %}
     <nav class="navbar navbar-default">
         <div class="container">
@@ -45,7 +50,7 @@
                             </span>
                         </a>
                     </li>
-                    <li><a href="{{ url_for('wot.user', username=current_user.username) }}">{{ _('Wot') }}</a></li>
+                    <li><a href="{{ url_for('wot.wot', username=current_user.username) }}">{{ _('Wot') }}</a></li>
                     <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
                     <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
@@ -72,6 +77,7 @@
 
 {% block scripts %}
     {{ super() }}
+    <script src="https://kit.fontawesome.com/1d312fba3e.js" crossorigin="anonymous"></script>
     {{ moment.include_moment() }}
     {{ moment.lang(g.locale) }}
     <script>

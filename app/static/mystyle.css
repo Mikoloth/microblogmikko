@@ -1,0 +1,20 @@
+.statistic {
+    border: 2px dashed green;
+    border-radius: 10px;
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+.fas.iso {
+    font-size: 10vw;
+}
+
+h7 {
+    font-size:2vw;
+    float:right
+}
+
+.trees {
+    display:inline-block;
+    float:right
+}

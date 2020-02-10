@@ -14,6 +14,7 @@ import base64
 from datetime import datetime, timedelta
 import os
 from urllib.request import urlopen
+from flask_babel import _, get_locale
 
 class SearchableMixin(object):
     @classmethod
@@ -120,8 +121,11 @@ class User(PaginatedAPIMixin, UserMixin, db.Model):
     def set_wotid(self, nick):
         json_url = urlopen("https://api.worldoftanks.eu/wot/account/list/?application_id="+os.environ['WOT_API_KEY']+"&search="+nick)
         data = json.loads(json_url.read())
-        #flash(data["data"][0]["account_id"])
-        self.wotid = data["data"][0]["account_id"]
+        #flash(len(data["data"]))
+        if len(data["data"]) == 1:
+            self.wotid = data["data"][0]["account_id"]
+        else:
+            flash(_('Multiple nicks! Cannot set wotid!'))
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
